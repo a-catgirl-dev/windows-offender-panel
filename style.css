@@ -55,6 +55,21 @@ body {
     gap: 5px;
 }
 
+.selection-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 6px;
+    border: 2px solid var(--outline-color);
+    border-radius: 4px;
+    background-color: var(--ctp-surface0);
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
 #powercontrol p {
     margin: 0px;
     margin-left: 5px;

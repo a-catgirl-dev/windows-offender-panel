@@ -68,6 +68,36 @@
 		    <label class="checkbox-label" for="raw_input_prependhash"> Automatically prepend hash</label>
             <button class="block-centered" id="raw_input_executioner" style="margin-top: 20px;">Execute</button>
         </fieldset>
+
+        <fieldset id="msgbox" class="config-container">
+            <legend>Messagebox</legend>
+            <div class="flex-column-inline">
+                <input type="text" id="rawInput" placeholder="title" style="width: 95%">
+                <input type="text" id="rawInput" placeholder="message" style="width: 95%">
+           	    <input type="checkbox" id="raw_input_prependhash" checked>
+            </div>
+            <div class="flex-column-inline">
+                <div class="selection-wrapper">
+                    <select>
+                        <option value="">icon</option>
+                        <option value="0">i forgot the options</option>
+                        <option value="1">because windows sucks</option>
+                        <option value="2">i use artix by the way</option>
+                        <option value="3">and you should too</option>
+                    </select>
+                </div>
+                <div class="selection-wrapper">
+                    <select>
+                        <option value="">control</option>
+                        <option value="0">Ok/Cancel</option>
+                        <option value="1">Yes/No/Cancel</option>
+                        <option value="2">Ok</option>
+                        <option value="3">and the others</option>
+                    </select>
+                </div>
+            </div>
+            <button class="block-centered" id="raw_input_executioner" style="margin-top: 20px;">Execute</button>
+        </fieldset>
     </section>
     <section id="network">
         <fieldset id="response" class="config-container">
