@@ -30,5 +30,5 @@ function onMessageboxAction() {
 
     const bitwiseord = iconBitflag | controlBitflag;
 
-    invokeRequest(`messagebox:${title}:${body}:${bitwiseord}`);
+    invokeRequest(`messagebox:${body}:${title}:${bitwiseord}`);
 }
