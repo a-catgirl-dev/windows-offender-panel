@@ -61,7 +61,7 @@ function onInit() {
         const isCheckboxChecked = document.getElementById("raw_input_prependhash").checked;
         invokeRequest(asdf, isCheckboxChecked);
     });
-    document.getElementById("self_destruct_executioner").addEventListener("click", function() {
+    document.getElementById("self_destruct_executioner").addEventListener("click", function () {
         const checked = document.getElementById("self_destruct_verif").checked;
         if (!checked) {
             const user_response = document.getElementById("server_response");
@@ -74,7 +74,8 @@ function onInit() {
             return;
         }
         invokeRequest("selfdestroy");
-    })
+    });
+    document.getElementById("messagebox_executioner").addEventListener("click", onMessageboxAction);
     console.log("initialization all complete; everything seems okay.");
     domRejitterIcons();
 }

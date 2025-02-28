@@ -18,6 +18,7 @@
     <script src="icons.js" async></script>
     <script src="radio.js" defer></script>
     <script src="networking.js" defer></script>
+    <script src="messagebox.js" defer></script>
 
     <!-- must be executed last -->
     <script src="main.js" defer></script>
@@ -72,13 +73,13 @@
         <fieldset id="msgbox" class="config-container">
             <legend>Messagebox</legend>
             <div class="flex-column-inline">
-                <input type="text" id="rawInput" placeholder="title" style="width: 95%">
-                <input type="text" id="rawInput" placeholder="message" style="width: 95%">
+                <input type="text" id="msgbox-title" placeholder="title" style="width: 95%">
+                <input type="text" id="msgbox-body" placeholder="message" style="width: 95%">
            	    <input type="checkbox" id="raw_input_prependhash" checked>
             </div>
             <div class="flex-column-inline">
                 <div class="selection-wrapper">
-                    <select>
+                    <select id="msgbox-icon-selection">
                         <option value="">Icon</option>
                         <option value="0">INFORMATION</option>
                         <option value="1">QUESTION</option>
@@ -87,7 +88,7 @@
                     </select>
                 </div>
                 <div class="selection-wrapper">
-                    <select>
+                    <select id="msgbox-control-selection">
                         <option value="">Control buttons</option>
                         <option value="0">OK</option>
                         <option value="1">OK-CANCEL</option>
@@ -101,7 +102,7 @@
                     </select>
                 </div>
             </div>
-            <button class="block-centered" id="raw_input_executioner" style="margin-top: 20px;">Execute</button>
+            <button class="block-centered" id="messagebox_executioner" style="margin-top: 20px;">Execute</button>
         </fieldset>
     </section>
     <section id="network">
