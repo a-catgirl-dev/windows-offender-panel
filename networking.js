@@ -119,8 +119,7 @@ function parseStatusCode(input) {
     console.log(`first 4 letters: ${firstFour}, parseInt'd: ${parseInt(firstFour)}`);
     // hardcoded: set checkmark if STATUS_SUCCESS
     if (firstFour == 0 || firstFour == 50) {
-
-        console.log("firsfour trig");
+        
         icon_symbol.classList.remove("icon-cross");
         icon_symbol.classList.add("icon-checkmark");
     } else {
