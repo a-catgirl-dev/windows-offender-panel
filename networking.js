@@ -6,6 +6,8 @@ const STATUS_CODES = {
     "0004": "UNKNOWN_REQUEST",
     "0005": "NOT_ENOUGH_ARGUMENTS",
     "0006": "INVALID_REQUEST_SYNTAX",
+    "0007": "THREAD_CREATION_FAILED",
+    "0050": "THREADED_ACTION",
     "0100": "UNSUCCESSFUL",
 };
 
@@ -97,7 +99,7 @@ async function invokeRequestInner(message, prepend_hash = true) {
         console.log(decryptedResponse);
         decryptedResponse = Array.from(decryptedResponse, byte => String.fromCharCode(byte));
         decryptedResponse = decryptedResponse.join('');
-        console.log(decryptedResponse);
+        console.log(`decrypted Response: ${decryptedResponse}`);
         // its either [statuscode] or [statuscode][nonce][encrypted_data]
         user_response.textContent = `${status_code} response: ${decryptedResponse}`;
     } catch (e) {
@@ -116,7 +118,9 @@ function parseStatusCode(input) {
     firstFour = firstFour.join('');
     console.log(`first 4 letters: ${firstFour}, parseInt'd: ${parseInt(firstFour)}`);
     // hardcoded: set checkmark if STATUS_SUCCESS
-    if (firstFour == 0000) {
+    if (firstFour == 0 || firstFour == 50) {
+
+        console.log("firsfour trig");
         icon_symbol.classList.remove("icon-cross");
         icon_symbol.classList.add("icon-checkmark");
     } else {
